@@ -1,0 +1,29 @@
+.snackbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  animation: slide-in 0.5s ease-out, slide-out 0.5s 2.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

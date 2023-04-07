@@ -1,0 +1,23 @@
+<div class="mb-3">
+  <label 
+    [ngClass]="['form-label ' + labelStyle]"
+    for="{{id}}"
+  >
+    {{label}}
+  </label>
+  <div [ngClass]='"input-group " + formStyle'>
+    <span [ngClass]="'input-group-text'" *ngIf="append" >{{appendText}}</span>  
+  <input 
+    type="{{type}}" 
+    [ngClass]="['form-control', inputStyle]"
+    id="{{id}}" 
+    name="{{name}}" 
+    [autocomplete]="autocomplete" 
+    [placeholder]="placeholder" 
+    [required]="required"
+    [(ngModel)]="value" 
+    (ngModelChange)="onChange($event)"
+  >
+  <span [ngClass]="'input-group-text'" *ngIf="prepend" >{{prependText}}</span>
+</div>
+</div>

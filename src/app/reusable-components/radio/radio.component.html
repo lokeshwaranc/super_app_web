@@ -1,0 +1,9 @@
+<div class="radio-button-group">
+  <div [ngClass]='"radio-group-label" + labelStyle'>{{ label }}</div>
+  <div class="radio-button-container">
+    <label *ngFor="let option of options" [ngClass]='"me-2 radio-button-label" + radioLabelStyle'>
+      <input type="radio" [ngClass]='"" + radioStyle' [name]="name" [value]="option.value || option" [checked]="option.value === value" (change)="onChange($event)">
+      {{ option.label || option }}
+    </label>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<label for="{{id}}" class="form-label">{{label}}</label>
+<select class="form-select" name="name" id="{{id}}" (change)="onChange($event)">
+  <option selected disabled >Select {{name}}</option>
+  <ng-container *ngFor="let option of options" >
+  <option value="{{option.value||option}}" >{{option.label || option}}</option>
+</ng-container>
+</select>
